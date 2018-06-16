@@ -14,7 +14,7 @@ the configuration files and keyring may not be synced properly.
 * Generate UUID: `UUID=$(uuidgen)`
 * Generate the OSD secret: `OSD_SECRET=$(ceph-authtool --gen-print-key)`
 * Set ID if the OSD is replacing an decommissioned ID: `ID={my_id}`
-* Output them for the next steps: `echo -e "UUID: $UUID\nSECRE: $OSD_SECRET\nID: $ID"`
+* Output them for the next steps: `echo -e "UUID: $UUID\nSECRET: $OSD_SECRET\nID: $ID"`
 * Create the new OSD: `echo "{\"cephx_secret\": \"$OSD_SECRET\"}" | ceph osd new $UUID $ID -i - -n client.bootstrap-osd -k /var/lib/ceph/bootstrap-osd/ceph.keyring` and remember the outputted ID
 
 3 - On new OSD
