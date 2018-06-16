@@ -1,18 +1,15 @@
-FIRST THING
-===========
+Create a Ceph OSD
+=================
 
-On mon
-------
+1 - On the new OSD
+------------------
 
 We absolutely need to check that this new OSD have proper access to the ceph
 cluster. Run `ceph -s` and it must return the cluster health status. If not,
 the configuration files and keyring may not be synced properly.
 
-Let's go!
-=========
-
-On mon
-------
+2 - On mon
+----------
 
 * Generate UUID: `UUID=$(uuidgen)`
 * Generate the OSD secret: `OSD_SECRET=$(ceph-authtool --gen-print-key)`
@@ -20,8 +17,8 @@ On mon
 * Output them for the next steps: `echo -e "UUID: $UUID\nSECRE: $OSD_SECRET\nID: $ID"`
 * Create the new OSD: `echo "{\"cephx_secret\": \"$OSD_SECRET\"}" | ceph osd new $UUID $ID -i - -n client.bootstrap-osd -k /var/lib/ceph/bootstrap-osd/ceph.keyring` and remember the outputted ID
 
-On new OSD
-----------
+3 - On new OSD
+--------------
 
 * Import UUID: `read UUID`
 * Import OSD secret: `read OSD_SECRET`
