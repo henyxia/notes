@@ -7,6 +7,7 @@ Create array
 ```
 mdadm --create /dev/mdX --level=X --raid-devices=X /dev/sdX /dev/sdY
 ```
+
 Delete array
 ------------
 
