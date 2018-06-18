@@ -1,6 +1,8 @@
 Notes
 =====
 
+[This notes are available here](https://henyxia.github.io/notes/)
+
 [Ceph](ceph)
 ------------
 
