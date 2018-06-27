@@ -24,7 +24,7 @@ Bluestore
 * Prepare the new disk with `ceph-volume --cluster $CLUSTER lvm prepare --data $DISK`
 * Set the new OSD ID with `read OSD_ID`
 * Check with `ceph-volume --cluster $CLUSTER lvm list`
-* Finally, activate this new OSD with `ceph-volume activate $OSD_ID`
+* Finally, activate this new OSD with `ceph-volume lvm activate --all`
 
 *The OSD should now join the cluster*
 
