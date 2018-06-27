@@ -1,10 +1,10 @@
 Notes
 =====
 
-[This notes are available here](https://henyxia.github.io/notes/)
+[These notes are available here](https://henyxia.github.io/notes/)
 
-[Ceph](ceph)
-------------
+Ceph
+----
 
 * [OSD Creation](ceph/create-osd.md)
 * [OSD Removal](ceph/remove-osd.md)
