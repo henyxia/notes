@@ -14,6 +14,7 @@ Ceph
 
 * [OSD Creation](ceph/create-osd.md)
 * [OSD Removal](ceph/remove-osd.md)
+* [OSD Tuning](ceph/tuning-osd.md)
 
 [RAID (soft)](raid/raid.md)
 -------------------
