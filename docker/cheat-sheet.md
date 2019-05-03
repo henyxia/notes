@@ -3,18 +3,21 @@ Docker cheat sheet
 
 Display Docker version and info:
 
-`docker --version` or `docker version`
-`docker info`
+```
+docker --version
+docker version
+docker info
+```
 
 Image
 -----
 
 Execute Docker image:
 
-`docker run *image-name*`
+`docker run image-name`
 
 
-`-p *exposed-port*:*app-port*` Port parameter
+`-p exposed-port:app-port` Port parameter
 
 `-d` Run in detached mode
 
@@ -26,28 +29,29 @@ List Docker images:
 
 List Docker containers (running, all, all in quiet mode):
 
-`docker container ls`
-
-`docker container ls --all`
-
-`docker container ls -aq`
+```
+docker container ls
+docker container ls --all
+docker container ls -aq
+```
 
 Services
 --------
 
 Initialize and take down the swarm manager:
 
-`docker swarm init`
-
-`docker swarm leave --force`
+```
+docker swarm init
+docker swarm leave --force
+```
 
 
 Deploy and remove a stack:
 
-`docker stack deploy -c *compose-file* *stack-name*`
-
-`docker stack rm *stack-name*`
-
+```
+docker stack deploy -c compose-file stack-name
+docker stack rm stack-name
+```
 
 List services:
 
@@ -56,11 +60,11 @@ List services:
 
 List a service's tasks:
 
-`docker service ps *stack-name*`
+`docker service ps stack-name`
 
 Miscellaneous
 -------------
 
 Push an image to the Docker repository:
 
-`docker push *username*/*repository*:*tag*`
+`docker push username/repository:tag`
