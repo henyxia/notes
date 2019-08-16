@@ -29,6 +29,19 @@ Setting a lesser value for the OSD has been reported to fix most of OOM
 issues. For example, run this command to set the cache to 512MB:
 `ceph daemon ${OSD_ADMIN_SOCKET} config set bluestore_cache_size_hdd 536870912`
 
+My OSD is not respecting its memory limit
+-----------------=-----------------------
+
+Even if this issue could be related to an old bug now fixed, Ceph OSDs can
+consume more memory than expected. This can be related to Ceph OSD autotune
+capacity.
+
+To check current status of the autotune capacity:
+`ceph daemon ${OSD_ADMIN_SOCKET} config get bluestore_cache_autotune`
+
+To stop autotune:
+`ceph daemon ${OSD_ADMIN_SOCKET} config set bluestore_cache_autotune false`
+
 How to diag OSD memory usage
 ----------------------------
 
